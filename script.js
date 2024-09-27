@@ -1,23 +1,24 @@
-const button = document.getElementById("form-button");
-button.addEventListener("click", (e) => {
-  feedbackMessage(0);
-  e.preventDefault();
-});
-
 const feedbackMessage = (numReturned) => {
+  console.log("caiu na função");
   const feedback = document.getElementById("feedback-message");
   if (numReturned === 0) {
+    console.log("caiu no if");
     feedback.style.display = "block";
     feedback.innerText = "Não possui doença cardíaca";
     setTimeout(() => {
       feedback.style.display = "none";
     }, 2000);
+    return;
   }
   feedback.style.display = "block";
   feedback.innerText = "Possui doença cardíaca";
   setTimeout(() => {
     feedback.style.display = "none";
   }, 2000);
+};
+
+const handleClick = () => {
+  feedbackMessage(0);
 };
 
 // const postFormData = async () => {
