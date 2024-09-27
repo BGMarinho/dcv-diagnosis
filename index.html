@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DCV Diagnosis</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <main>
+      <!--lembrar de implementar a prop action-->
+      <form method="post" class="form-container">
+        <label for="age">Idade</label>
+        <input type="number" name="age" id="age" required />
+
+        <label for="sex">Sexo do paciente</label>
+        <select name="sex-selection" id="sex" required>
+          <option selected disabled value="">Selecione uma opção</option>
+          <option value="0">mulher</option>
+          <option value="1">homem</option>
+        </select>
+
+        <label for="cp">Tipo da dor toráxica</label>
+        <select name="cs-selection" id="cp" required>
+          <option selected disabled value="">Selecione uma opção</option>
+          <option value="1">Angina típica</option>
+          <option value="2">Angina atípica</option>
+          <option value="3">Dor não cardíaca</option>
+          <option value="4">Assintomática</option>
+        </select>
+
+        <label for="trestbps">Pressão arterial em repouso</label>
+        <input type="number" name="trestbps" id="trestbps" required />
+
+        <label for="chol">Colesterol sérico (mg/dl)</label>
+        <input type="number" name="chol" id="chol" required />
+
+        <label for="fbs">Açúcar no sangue em jejum > 120mg/dl</label>
+        <select name="fbs-selection" id="fbs" required>
+          <option selected disabled value="">Selecione uma opção</option>
+          <option value="0">Não</option>
+          <option value="1">Sim</option>
+        </select>
+
+        <label for="restecg">Resultado do eletrocardiograma em repouso</label>
+        <select name="restecg-selection" id="restecg" required>
+          <option selected disabled value="">Selecione uma opção</option>
+          <option value="0">Normal</option>
+          <option value="1">
+            Anormalidade de ST-T (inversão da onda T e elevação ou depressão de
+            > 0.05mV)
+          </option>
+          <option value="2">
+            Hipertrofia ventricular esquerda provável ou definitiva (pelos
+            critérios de Romhilt-Estes)
+          </option>
+        </select>
+
+        <label for="thalach">Frequência cardíaca máxima atingida</label>
+        <input type="number" name="thalach" id="thalach" required />
+
+        <label for="exang">Angina induzida pelo exercício?</label>
+        <select name="exang-selection" id="exang" required>
+          <option selected disabled value="">Selecione uma opção</option>
+          <option value="0">Não</option>
+          <option value="1">Sim</option>
+        </select>
+
+        <label for="oldpeak">
+          Depessão do segmento ST induzida pelo exercício em relação ao repouso
+        </label>
+        <input type="number" name="oldpeak" id="oldpeak" required />
+
+        <label for="slope">
+          Inclinação do segmento ST no pico do exercício
+        </label>
+        <input type="number" name="slope" id="slope" required />
+
+        <label for="ca">
+          Número de vasos principais colorido por fluoroscopia
+        </label>
+        <input type="number" name="ca" id="ca" required />
+
+        <label for="thal">Angina induzida pelo exercício?</label>
+        <select name="thal-selection" id="thal" required>
+          <option selected disabled value="">Selecione uma opção</option>
+          <option value="3">Normal</option>
+          <option value="6">Defeito fixo</option>
+          <option value="7">Defeito reversível</option>
+        </select>
+
+        <button type="submit" onclick="handleClick()">Enviar dados</button>
+      </form>
+    </main>
+  </body>
+</html>
