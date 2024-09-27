@@ -4,6 +4,7 @@ const feedbackMessage = (numReturned) => {
   if (numReturned === 0) {
     console.log("caiu no if");
     feedback.style.display = "block";
+    feedback.style.backgroundColor = "#7FFFD4";
     feedback.innerText = "Não possui doença cardíaca";
     setTimeout(() => {
       feedback.style.display = "none";
@@ -11,6 +12,7 @@ const feedbackMessage = (numReturned) => {
     return;
   }
   feedback.style.display = "block";
+  feedback.style.backgroundColor = "#DE3163";
   feedback.innerText = "Possui doença cardíaca";
   setTimeout(() => {
     feedback.style.display = "none";
